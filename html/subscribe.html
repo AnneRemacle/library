@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Biblio - Inscription</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
+            <nav class="nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="nav__item nav__item--left" href="../index.html" title="Retour à la page d'accueil">
+                    <img class="nav__item--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
+                </a>
+                <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="nav__item nav__item--left" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+
+                <form  class="nav__item--left nav__form" action="#" method="post">
+                    <input class="nav__form--input" type="search" name="research" value="Faire une recherche" />
+                    <input class="nav__form--button" type="submit" value="Chercher">
+                </form>
+                <a class="nav__item nav__item--right" href="connexion.html" title="Vers l'espace personnel">Connexion</a>
+                <a class="nav__item nav__item--right" href="subscribe.html" title="S'inscrire sur le site">Inscription</a>
+            </nav>
+
+        </header>
+
+        <section class="content">
+            <h2 class="content__title">Inscription</h2>
+
+            <form class="content__form form" action="#" method="post">
+                    <label class="content__form-label" for="login">Nom d'utilisateur</label>
+                    <input class="content__form-input" type="text" name="login" id="login">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="exemple@exemple.com" />
+
+                    <label class="content__form-label" for="password">Choisissez un mot de passe</label>
+                    <input class="content__form-input" type="password" name="password" id="password" />
+
+                    <label class="content__form-label" for="password">Retapez le mot de passe</label>
+                    <input class="content__form-input" type="password" name="password" id="password" />
+
+                    <label clas="content__form-label" for="name">Nom</label>
+                    <input class="content__form-input" type="text" name="name" id="name" placeholder="ex: Ochon" />
+
+                    <label clas="content__form-label" for="firstname">Prénom</label>
+                    <input class="content__form-input" type="text" name="firstname" id="firstname" placeholder="ex: Pol" />
+
+                    <p class="content__form-title">Sexe</p>
+                    <input class="content__form-radio" type="radio" name="sex" id="male" />
+                    <label class="content__form-radioLabel" for="male">Homme</label>
+                    <input class="content__form-radio" type="radio" name="sex" id="female" />
+                    <label class="content__form-radioLabel" for="female">Femme</label>
+
+                    <label clas="content__form-label" for="birthdate">Date de naissance</label>
+                    <input class="content__form-input" type="date" name="birthdate" id="birthdate" placeholder="ex: 27/07/1990" />
+
+                    <input type="checkbox" name="newsletter" id="newsletter" />
+                    <label for="newsletter">Je souhaite m'abonner à la newsletter de Biblio</label>
+                    <input type="checkbox" name="generals" id="generals" required />
+                    <label for="generals">J'accepte les conditions générales de Biblio</label>
+                <input class="content__form-button" type="submit" name="connexion" value="Se connecter" />
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-bottom">
+                <p class="footer-bottom__text">HEPL 2015-2016</p>
+                <small class="footer-bottom__small">© Anne Remacle</small>
+            </div>
+        </footer>
+    </body>
+</html>

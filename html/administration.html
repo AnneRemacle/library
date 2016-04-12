@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bibliothèque - Espace personnel</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
+            <nav class="nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="nav__item nav__item--left" href="../index.html" title="Retour à la page d'accueil">
+                    <img class="nav__item--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
+                </a>
+                <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="nav__item nav__item--left" href="libraries/html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+
+                <form  class="nav__item--left nav__form" action="#" method="post">
+                    <input class="nav__form--input" type="search" name="research" value="Faire une recherche" />
+                    <input class="nav__form--button" type="submit" value="Chercher">
+                </form>
+                <a class="nav__item nav__item--right" href="administration.html" title="Mon espace perso">MyBiblio</a>
+                <a class="nav__item nav__item--right logout" href="index.html" title="Se déconnecter">Déconnexion</a>
+            </nav>
+
+        </header>
+
+        <section class="content">
+            <h2 class="content__title">Espace perso de: Pol Ochon</h2>
+
+            <p class="content__text">Livres ajoutés: x</p>
+            <p class="content__text">Commentaires: x</p>
+
+        </section>
+
+        <aside class="aside">
+            <h2 class="hidden">Menu de l'espace perso</h2>
+            <navclass="aside__nav">
+                <h3 class="hidden">Actions possibles</h3>
+                <a class="aside__nav-link" href="add.html">Ajouter un livre</a>
+                <a class="aside__nav-link" href="mybooks.html">Mes livres</a>
+                <a class="aside__nav-link" href="modify.html">Modifier un livre</a>
+            </nav>
+        </aside>
+
+        <footer class="footer">
+            <div class="footer-bottom">
+                <p class="footer-bottom__text">HEPL 2015-2016</p>
+                <small class="footer-bottom__small">© Anne Remacle</small>
+            </div>
+        </footer>
+    </body>
+</html>
