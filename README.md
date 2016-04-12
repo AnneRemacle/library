@@ -7,3 +7,5 @@ Note: the school where the course is given, the HEPL from Liège, Belgium, is a 
 
 ##1<sup>re</sup> partie
 Préparation des fichiers html
+
+ERRATUM: First Commit est inutile, les fichiers n'ont pas été uploadés
