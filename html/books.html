@@ -3,29 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <title>Biblio - Livres</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
     </head>
     <body>
-            <header>
-                <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
-                <nav class="nav">
-                    <h2 class="hidden">Navigation</h2>
-                    <a class="nav__item nav__item--left" href="../index.html" title="Retour à la page d'accueil">
-                        <img class="nav__item--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
-                    </a>
-                    <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
-                    <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
-                    <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
-                    <a class="nav__item nav__item--left" href="libraries/html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+        <header class="header">
+            <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
 
-                    <form  class="nav__item--left nav__form" action="#" method="post">
-                        <input class="nav__form--input" type="search" name="research" value="Faire une recherche" />
-                        <input class="nav__form--button" type="submit" value="Chercher">
-                    </form>
-                    <a class="nav__item nav__item--right" href="connexion.html" title="Vers l'espace personnel">Connexion</a>
-                    <a class="nav__item nav__item--right" href="subscribe.html" title="S'inscrire sur le site">Inscription</a>
-                </nav>
+            <nav id="nav" class="header__nav nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="nav__item nav__item--left" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+                <a class="nav__item nav__item--left" href="connexion.html" title="Vers l'espace personnel">Connexion</a>
+                <a class="nav__item nav__item--left" href="subscribe.html" title="S'inscrire sur le site">Inscription</a>
+            </nav>
 
-            </header>
+            <div class="part header__icons">
+                <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
+                <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
+            </div>
+
+            <div class="part">
+                <a class="header__home" href="index.html" title="Retour à la page d'accueil">
+                    <img class="header__home--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
+                </a>
+                <form  class="header__form" action="#" method="post">
+                    <input class="header__form--input" type="search" name="research" value="Faire une recherche" />
+                    <input class="header__form--button" type="submit" value="Chercher">
+                </form>
+            </div>
+
+            <div class="part header__right">
+                <a class="nav__item nav__item--right" href="connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i>
+</a>
+                <a class="nav__item nav__item--right" href="subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i>
+</a>
+            </div>
+
+        </header>
 
             <section class="content">
                 <h2 class="content__title">Les livres</h2>

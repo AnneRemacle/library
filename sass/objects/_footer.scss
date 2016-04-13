@@ -1,0 +1,73 @@
+/* Biblio
+ *
+ * /sass/objects/_footer.scss - Non-cosmetic styles for footer
+ *
+ * coded by Anne
+ * started at 13/04/2016
+ */
+
+.footer {
+    background-image: $bgGradient;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    overflow:auto;
+    color: $footerTextColor;
+
+    &-left {
+        float:left;
+    }
+    &-right {
+        float:right;
+    }
+    &-left, &-right {
+        display: table-cell;
+        width: 50%;
+        margin: 5em 0;
+        text-align: center;
+    }
+    &__title {
+        font-weight: bold;
+        font-style: 2em;
+        padding-bottom: 1em;
+    }
+    &__link {
+        text-decoration: none;
+        color: $footerTextColor;
+        text-transform: uppercase;
+        text-align: center;
+        background: $footerButtonBg;
+        display: inline-block;
+        width: 60%;
+        padding: 1em 0.6em;
+        border-radius: 3px;
+
+    }
+    &__link:hover {
+        background: $footerButtonHover;
+        text-decoration: underline;
+        transition: 0.3s ease-in-out;
+    }
+    &-bottom {
+        margin: 2em 10%;
+        &__small {
+            margin-left: 2em;
+        }
+    }
+}
+
+@media screen and (min-width:$mobileWidth ) and (max-width: $verticalTabletWidth) {
+    .footer {
+        &-left, &-right {
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media screen and (min-width:$verticalTabletWidth ) and (max-width: $horizontalTabletWidth) {
+    .footer {
+        &-left, &-right {
+            font-size: 1.4em;
+        }
+    }
+}

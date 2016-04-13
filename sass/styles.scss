@@ -1,0 +1,32 @@
+/* Biblio
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Anne
+ * started at 13/04/2016
+ */
+
+ // 1. Settings - Variables globales
+ @import "settings/paths";
+ @import "settings/colors";
+ @import "settings/fonts";
+ @import "settings/sizes";
+
+ // 2. Tools - Mixins globaux, functions & outils
+ @import "tools/utils";
+
+ // 3. Generic - Style de remise à zéro (reset, normalize…)
+ @import "generic/meyer-reset";
+ @import "generic/box-sizing";
+
+ // 4. Base - Éléments bruts
+ @import "base/root";
+
+ // 5. Objects - Éléments de mise en forme non-cosmétique
+
+ @import "objects/header";
+ @import "objects/content";
+ @import "objects/footer";
+
+
+ // 6. Components - Design des composants, morceaux d'UI
