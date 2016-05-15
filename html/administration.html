@@ -3,47 +3,104 @@
     <head>
         <meta charset="UTF-8">
         <title>Bibliothèque - Espace personnel</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
-            <nav class="nav">
-                <h2 class="hidden">Navigation</h2>
-                <a class="nav__item nav__item--left" href="../index.html" title="Retour à la page d'accueil">
-                    <img class="nav__item--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
+        <header class="header">
+            <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
+            <div class="header-top">
+                <a href="../index.html" title="Retour à la page d'accueil" class="header-top__container">
+                    <img class="header-top__logo" src="../assets/img/logo-white.png" alt="Logo de la bibliothèque" />
                 </a>
-                <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
-                <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
-                <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
-                <a class="nav__item nav__item--left" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
-
-                <form  class="nav__item--left nav__form" action="#" method="post">
-                    <input class="nav__form--input" type="search" name="research" value="Faire une recherche" />
-                    <input class="nav__form--button" type="submit" value="Chercher">
-                </form>
-                <a class="nav__item nav__item--right" href="administration.html" title="Mon espace perso">MyBiblio</a>
-                <a class="nav__item nav__item--right logout" href="index.html" title="Se déconnecter">Déconnexion</a>
+                <div class="header-top__nav nav">
+                    <a href="administration.html" class="header-top__nav--item nav__item nav__item-connect">Connecté en tant que<br> Pol Ochon</a>
+                    <a href="logout.html" class="header-top__nav--item nav__item nav__item-connect">Se déconnecter</a>
+                </div>
+                <!-- <form  class="header-top__form" action="#" method="post">
+                    <input class="header-top__form--input" type="search" name="research" value="Faire une recherche" />
+                    <button class="header-top__form--button" type="submit" value="Chercher">
+                </form> -->
+            </div>
+            <nav id="nav" class="header-bottom header-bottom__nav nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="header-bottom__nav--item nav__item" href="html/books.html" title="Voir tous les livres">Les livres</a>
+                <a class="header-bottom__nav--item nav__item" href="html/authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="header-bottom__nav--item nav__item" href="html/editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="header-bottom__nav--item nav__item" href="html/libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
             </nav>
+            <h2 class="header__punchline">Biblio - trouvez votre prochaine lecture!</h2>
+
+            <!-- <div class="part header__icons">
+                <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
+                <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
+            </div> -->
+
+
+
+            <!-- <div class="part header__right">
+                <a class="nav__item nav__item--right" href="html/connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i></a>
+                <a class="nav__item nav__item--right" href="html/subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i></a>
+            </div> -->
 
         </header>
 
-        <section class="content">
+        <section class="content clearfix content-admin">
             <h2 class="content__title">Espace perso de: Pol Ochon</h2>
+            <section class="content__summary clearfix">
+                <h3 class="content__summary-title">Résumé</h3>
+                <p class="content__text"><span class="content__text--strong">Livres ajoutés&nbsp;:</span> x</p>
+                <p class="content__text"><span class="content__text--strong">Commentaires&nbsp;:</span> x</p>
+            </section>
 
-            <p class="content__text">Livres ajoutés: x</p>
-            <p class="content__text">Commentaires: x</p>
+            <section class="others">
+                <h2 class="others__title">Les livres que j'ai ajoutés</h2>
+                <ul class="others__list">
+                    <li class="others__item">
+                        <a class="others__link" href="view-book.html" title="Voir la fiche du livre">Livre 1</a>
+                        <a class="others__modify" href="update-book.html">Modifier le livre</a>
+                    </li>
+                    <li class="others__item">
+                        <a class="others__link" href="view-book.html" title="Voir la fiche du livre">Livre 1</a>
+                        <a class="others__modify" href="update-book.html">Modifier le livre</a>
+                    </li>
+                    <li class="others__item">
+                        <a class="others__link" href="view-book.html" title="Voir la fiche du livre">Livre 1</a>
+                        <a class="others__modify" href="update-book.html">Modifier le livre</a>
+                    </li>
+                    <li class="others__item">
+                        <a class="others__link" href="view-book.html" title="Voir la fiche du livre">Livre 1</a>
+                        <a class="others__modify" href="update-book.html">Modifier le livre</a>
+                    </li>
+                    <li class="others__item">
+                        <a class="others__link" href="view-book.html" title="Voir la fiche du livre">Livre 1</a>
+                        <a class="others__modify" href="update-book.html">Modifier le livre</a>
+                    </li>
+
+                </ul>
+            </section>
 
         </section>
 
-        <aside class="aside">
+        <aside class="aside clearfix">
             <h2 class="hidden">Menu de l'espace perso</h2>
-            <navclass="aside__nav">
-                <h3 class="hidden">Actions possibles</h3>
-                <a class="aside__nav-link" href="add.html">Ajouter un livre</a>
-                <a class="aside__nav-link" href="mybooks.html">Mes livres</a>
-                <a class="aside__nav-link" href="modify.html">Modifier un livre</a>
+            <nav class="aside__nav">
+                <h3 class="aside__nav-title">Que voulez-vous faire?</h3>
+                <ul>
+
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="administration.html">Mon profil</a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="add-book.html">Ajouter un livre</a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="modify.html">Modifier mon profil</a>
+                    </li>
+                </ul>
             </nav>
         </aside>
+
 
         <footer class="footer">
             <div class="footer-bottom">

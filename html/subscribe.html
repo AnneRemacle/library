@@ -8,39 +8,41 @@
     </head>
     <body>
         <header class="header">
-            <h1 class="hidden">Biblio - trouvez votre prochaine lecture!</h1>
+            <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
+            <div class="header-top">
+                <a href="../index.html" title="Retour à la page d'accueil" class="header-top__container">
+                    <img class="header-top__logo" src="../assets/img/logo-white.png" alt="Logo de la bibliothèque" />
+                </a>
+                <div class="header-top__nav nav">
+                    <a href="connexion.html" class="header-top__nav--item nav__item">Se connecter</a>
+                    <a href="subscribe.html" class="header-top__nav--item nav__item">S'inscrire</a>
 
-            <nav id="nav" class="header__nav nav">
+                </div>
+                <!-- <form  class="header-top__form" action="#" method="post">
+                    <input class="header-top__form--input" type="search" name="research" value="Faire une recherche" />
+                    <button class="header-top__form--button" type="submit" value="Chercher">
+                </form> -->
+            </div>
+            <nav id="nav" class="header-bottom header-bottom__nav nav">
                 <h2 class="hidden">Navigation</h2>
-                <a class="nav__item nav__item--left" href="books.html" title="Voir tous les livres">Les livres</a>
-                <a class="nav__item nav__item--left" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
-                <a class="nav__item nav__item--left" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
-                <a class="nav__item nav__item--left" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
-                <a class="nav__item nav__item--left" href="connexion.html" title="Vers l'espace personnel">Connexion</a>
-                <a class="nav__item nav__item--left" href="subscribe.html" title="S'inscrire sur le site">Inscription</a>
+                <a class="header-bottom__nav--item nav__item" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="header-bottom__nav--item nav__item" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="header-bottom__nav--item nav__item" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="header-bottom__nav--item nav__item" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
             </nav>
+            <h2 class="header__punchline">Biblio - trouvez votre prochaine lecture!</h2>
 
-            <div class="part header__icons">
+            <!-- <div class="part header__icons">
                 <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
                 <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
-            </div>
+            </div> -->
 
-            <div class="part">
-                <a class="header__home" href="index.html" title="Retour à la page d'accueil">
-                    <img class="header__home--logo" src="../assets/img/logo.png" alt="Logo de la bibliothèque" />
-                </a>
-                <form  class="header__form" action="#" method="post">
-                    <input class="header__form--input" type="search" name="research" value="Faire une recherche" />
-                    <input class="header__form--button" type="submit" value="Chercher">
-                </form>
-            </div>
 
-            <div class="part header__right">
-                <a class="nav__item nav__item--right" href="connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i>
-    </a>
-                <a class="nav__item nav__item--right" href="subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i>
-    </a>
-            </div>
+
+            <!-- <div class="part header__right">
+                <a class="nav__item nav__item--right" href="html/connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i></a>
+                <a class="nav__item nav__item--right" href="html/subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i></a>
+            </div> -->
 
         </header>
 
@@ -48,38 +50,63 @@
             <h2 class="content__title">Inscription</h2>
 
             <form class="content__form form" action="#" method="post">
-                    <label class="content__form-label" for="login">Nom d'utilisateur</label>
-                    <input class="content__form-input" type="text" name="login" id="login">
 
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="exemple@exemple.com" />
+                <div class="form-group">
+                    <label class="form-label" for="login">Nom d'utilisateur</label>
+                    <input class="form-control" type="text" name="login" id="login" placeholder="Pol Ochon">
+                </div>
 
-                    <label class="content__form-label" for="password">Choisissez un mot de passe</label>
-                    <input class="content__form-input" type="password" name="password" id="password" />
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="exemple@exemple.com" />
+                </div>
 
-                    <label class="content__form-label" for="password">Retapez le mot de passe</label>
-                    <input class="content__form-input" type="password" name="password" id="password" />
+                 <div class="form-group">
+                    <label class="form-label" for="password">Choisissez un mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" />
+                </div>
+                <!--
+                <div class="form-group">
+                    <label class="form-label" for="password">Retapez le mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" />
+                </div>
 
-                    <label clas="content__form-label" for="name">Nom</label>
-                    <input class="content__form-input" type="text" name="name" id="name" placeholder="ex: Ochon" />
+                <div class="form-group">
+                    <label clas="form-label" for="name">Nom</label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="ex: Ochon" />
+                </div>
 
-                    <label clas="content__form-label" for="firstname">Prénom</label>
-                    <input class="content__form-input" type="text" name="firstname" id="firstname" placeholder="ex: Pol" />
+                <div class="form-group">
+                    <label clas="form-label" for="firstname">Prénom</label>
+                    <input class="form-control" type="text" name="firstname" id="firstname" placeholder="ex: Pol" />
+                </div>
 
+                <div class="form-group">
                     <p class="content__form-title">Sexe</p>
                     <input class="content__form-radio" type="radio" name="sex" id="male" />
                     <label class="content__form-radioLabel" for="male">Homme</label>
                     <input class="content__form-radio" type="radio" name="sex" id="female" />
                     <label class="content__form-radioLabel" for="female">Femme</label>
+                </div>
 
-                    <label clas="content__form-label" for="birthdate">Date de naissance</label>
-                    <input class="content__form-input" type="date" name="birthdate" id="birthdate" placeholder="ex: 27/07/1990" />
+                <div class="form-group">
+                    <label clas="form-label" for="birthdate">Date de naissance</label>
+                    <input class="form-control" type="date" name="birthdate" id="birthdate" placeholder="ex: 27/07/1990" />
+                </div>
 
+                <div class="form-checkbox">
                     <input type="checkbox" name="newsletter" id="newsletter" />
                     <label for="newsletter">Je souhaite m'abonner à la newsletter de Biblio</label>
+                </div>
+                <div class="form-checkbox">
                     <input type="checkbox" name="generals" id="generals" required />
                     <label for="generals">J'accepte les conditions générales de Biblio</label>
-                <input class="content__form-button" type="submit" name="connexion" value="Se connecter" />
+                </div>
+                     -->
+
+                <div class="form-group">
+                    <input class="form-button" type="submit" name="connexion" value="Se connecter" />
+                </div>
             </form>
         </section>
 

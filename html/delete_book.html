@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Supprimer un livre</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
+            <div class="header-top">
+                <a href="../index.html" title="Retour à la page d'accueil" class="header-top__container">
+                    <img class="header-top__logo" src="../assets/img/logo-white.png" alt="Logo de la bibliothèque" width="110" height="210" />
+                </a>
+                <div class="header-top__nav nav">
+                    <a href="connexion.html" class="header-top__nav--item nav__item">Se connecter</a>
+                    <a href="subscribe.html" class="header-top__nav--item nav__item">S'inscrire</a>
+                    <!-- <a href="html/logout.html" class="header-top__nav--item nav__item hidden">Se déconnecter</a> -->
+                    <!-- <form  class="header-top__form" action="#" method="post">
+                        <input class="header-top__form--input" type="search" name="research" value="Faire une recherche" />
+                        <button class="header-top__form--button" type="submit" value="Chercher">
+                    </form> -->
+                </div>
+
+            </div>
+            <nav id="nav" class="header-bottom header-bottom__nav nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="header-bottom__nav--item nav__item" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="header-bottom__nav--item nav__item" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="header-bottom__nav--item nav__item" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="header-bottom__nav--item nav__item" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+            </nav>
+            <h2 class="header__punchline">Biblio - trouvez votre prochaine lecture!</h2>
+
+            <!-- <div class="part header__icons">
+                <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
+                <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
+            </div> -->
+
+
+
+            <!-- <div class="part header__right">
+                <a class="nav__item nav__item--right" href="html/connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i></a>
+                <a class="nav__item nav__item--right" href="html/subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i></a>
+            </div> -->
+
+        </header>
+
+        <section class="">
+        	<h1>Supprimer un album</h1>
+        </section>
+        <section class="">
+        	<p>Êtes-vous sûr de vouloir supprimer "<?php echo $data[ 'album' ][ 'title' ]; ?>" ?</p>
+        </section>
+        <section class="">
+        	<dl class="">
+        		<div>
+        			<dt>Titre :</dt>
+        			<dd>></dd>
+        		</div>
+        		<div>
+        			<dt>Auteur :</dt>
+        			<dd></dd>
+        		</div>
+        		<div>
+        			<dt>Éditeur :</dt>
+        			<dd><?php echo $data[ 'genre' ][ 'name' ]; ?></dd>
+        		</div>
+        	</dl>
+        	<form action="#" method="post">
+
+        		<input type="submit" value="Supprimer">
+        	</form>
+        </section>
+    </body>
+</html>

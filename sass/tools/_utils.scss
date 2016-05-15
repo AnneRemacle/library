@@ -1,11 +1,21 @@
-/* Biblio
+/* Sur un baobab
  *
- * /sass/tools/utils.scss - Small utilities
+ * /sass/tools/_utils.scss - Small utilities
  *
  * coded by Anne
- * started at 13/04/2016
+ * started at 26/04/2016
  */
 
  .hidden {
      display: none;
+ }
+
+ .clearfix:before,
+ .clearfix:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .clearfix:after {
+     clear: both;
  }

@@ -1,0 +1,28 @@
+/* Library
+ *
+ * /sass/components/_form-comments.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+ .form {
+
+     &-comment {
+         background: #beb8b8;
+         border-radius: 7px;
+         margin: 1em 0 3em;
+         padding: 1em 0;
+     }
+     &-control {
+         &--area {
+             height: 7em;
+         }
+     }
+     &-button {
+         &--smallBtn {
+             width: auto;
+             padding: 0.5em 1em;
+         }
+     }
+ }

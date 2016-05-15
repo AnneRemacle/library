@@ -1,0 +1,47 @@
+/* Library
+ *
+ * /sass/components/_comments.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.comments {
+    background: #e8e8e8;
+    padding: 2em;
+    &__alert {
+        font-size: 0.9em;
+        color: #747272;
+        padding: 1em 0;
+        &--link {
+            text-decoration: none;
+            color: $laborTextColor;
+            font-size: 1em;
+        }
+        &--link:hover {
+            text-decoration: underline;
+            transition: .3s ease;
+        }
+    }
+    &__list {
+        width: 60%;
+    }
+    &__item {
+        margin: 1.5em 0;
+        padding: 1.5em 0 0 1.5em;
+    }
+    &__item + &__item {
+        border-top: 1px solid $laborTextColor;
+    }
+    &__name {
+        display: block;
+    }
+    &__date {
+        font-style: italic;
+        font-size: 0.8em;
+    }
+    &__text {
+        padding: 0.6em 1em;
+    }
+
+}

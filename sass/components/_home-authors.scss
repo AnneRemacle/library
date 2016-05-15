@@ -1,0 +1,53 @@
+/* Library
+ *
+ * /sass/components/_home-authors.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.authors {
+    &__card {
+        background: $cardsBgColor;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        width: 48.634%; /*570px*/ // 46.075%; /*540px*/
+        display: inline-block;
+        margin-bottom: 1.25em; /*20px*/
+        &--img {
+            display: inline-block;
+            width: 40%;
+            height: auto;
+        }
+        &-right {
+            display: inline-block;
+            width: 54%; /*291,6px*/
+            vertical-align: top;
+            padding: .5em 2%;
+        }
+        &--title {
+            font-size: $middle;
+            line-height: 1.2;
+            margin-bottom: .5em;
+        }
+        &--button {
+            text-decoration: none;
+            display: inline-block;
+            color: $linksLight;
+            background: $bgButtonsReadMore;
+            padding: .8em 0;
+            text-align: center;
+            width: 100%;
+            margin-top: 1em;
+            border: 2px solid transparent;
+        }
+        &--button:hover {
+            color: $laborTextColor;
+            border: 2px solid $laborTextColor;
+            background: transparent;
+            transition: .3s ease-in-out;
+        }
+    }
+    &__card:nth-child(even) {
+        margin-right: 1.562%; /*20px;*/
+    }
+}

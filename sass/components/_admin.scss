@@ -1,0 +1,75 @@
+/* Library
+ *
+ * /sass/components/_admin.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+ .content {
+
+     &-admin {
+         display: inline-block;
+         width: 50%;
+         margin: 0 0 2em 7em;
+     }
+     &__summary {
+         display: inline-block;
+         width: 50%;
+         background: #e8e8e8;
+         padding: 2em;
+         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+         margin-bottom: 3em;
+         &-title {
+             font-size: $middle;
+             margin-bottom: 1em;
+         }
+     }
+     &__text {
+         &--strong {
+             font-size: 1.2em;
+         }
+     }
+ }
+
+ .others {
+     &__modify {
+         text-decoration: none;
+         color: $laborTextColor;
+     }
+     &__modify:before {
+         margin-right: .3em;
+         content:"";
+         font-family: 'Glyphs';
+     }
+     &__modify:hover {
+        border-bottom: 1px solid $laborTextColor;
+        transition: .3s ease;
+     }
+ }
+
+ .aside {
+     background: #e8e8e8;
+     padding: 2em;
+     width: 30%;
+     float:right;
+     display: inline-block;
+     vertical-align: top;
+     &__nav {
+        &-title {
+            font-size: $middle;
+            margin-bottom: 1em;
+        }
+        &-link {
+            text-decoration: none;
+            color: $laborTextColor;
+        }
+     }
+    &__item {
+        margin: 0.6em 0;
+    }
+    &__item:hover {
+        text-decoration: underline;
+        transition: .3s ease;
+    }
+ }

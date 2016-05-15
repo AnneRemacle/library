@@ -1,32 +1,58 @@
-/* Biblio
+/* Library
  *
  * /sass/styles.scss - Main stylesheet
  *
  * coded by Anne
- * started at 13/04/2016
+ * started at 26/04/2016
  */
 
- // 1. Settings - Variables globales
- @import "settings/paths";
- @import "settings/colors";
- @import "settings/fonts";
- @import "settings/sizes";
+// 1. Settings - Variables globales
 
- // 2. Tools - Mixins globaux, functions & outils
- @import "tools/utils";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/sizes";
 
- // 3. Generic - Style de remise à zéro (reset, normalize…)
- @import "generic/meyer-reset";
- @import "generic/box-sizing";
+// 2. Tools - Mixins globaux, functions & outils
+@import "tools/utils";
 
- // 4. Base - Éléments bruts
- @import "base/root";
+// 3. Generic - Style de remise à zéro (reset, normalize…)
+@import "generic/meyer-reset";
+@import "generic/box-sizing";
 
- // 5. Objects - Éléments de mise en forme non-cosmétique
+// 4. Base - Éléments bruts
+@import "base/root";
 
- @import "objects/header";
- @import "objects/content";
- @import "objects/footer";
+// 5. Objects - Éléments de mise en forme non-cosmétique
 
 
- // 6. Components - Design des composants, morceaux d'UI
+// 6. Components - Design des composants, morceaux d'UI
+@import "components/header";
+@import "components/content";
+@import "components/footer";
+
+    //home page
+    @import "components/home-books";
+    @import "components/home-authors";
+
+    // index books
+    @import "components/index-books";
+    @import "components/comments";
+
+    // index authors & editors
+    @import "components/index-authors-editors";
+
+    // index libraries
+    @import "components/index-libraries";
+
+    // view for 1 book, author, editor, library
+    @import "components/view";
+
+    // admin page
+    @import "components/admin";
+
+// 7. Trumps - Styles spécifiques à un élément
+    // base for forms
+        @import "components/form";
+    // form for comments on books
+        @import "components/form-comments";
+// ----- tmp

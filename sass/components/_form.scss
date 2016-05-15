@@ -1,0 +1,79 @@
+/* Library
+ *
+ * /sass/components/_form.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.form {
+    width: 60%;
+    margin: 0 auto 4em;
+
+    &-group {
+        margin: 0 auto 1.5em;
+        width: 80%;
+    }
+    &-label {
+        display: block;
+        width: 80%;
+        cursor: pointer;
+
+    }
+    &-control, &-button {
+        width: 100%;
+        margin: 0.5em 0;
+        box-sizing: border-box;
+    }
+    &-control {
+        border: 1px solid transparent;
+        padding: 1em 2%;
+        &--select {
+            position: relative;
+		    display: inline-block;
+		    vertical-align: middle;
+            padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+            -webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+        }
+    }
+
+    &-control:focus, .form-control:active {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        border: 1px solid rgba(81, 203, 238, 1);
+    }
+    &-button {
+        background: $laborTextColor;
+        border: 1px solid transparent;
+        color:white;
+        padding: 0.5em 0;
+        font-size: $middle;
+    }
+    &-button:hover {
+        border: 1px solid $laborTextColor;
+        color: $laborTextColor;
+        background: white;
+        transition: .3s ease;
+    }
+    &-select {
+        position: relative;
+    }
+    &-select::after {
+        position: absolute;
+        content: "";
+        font-family:'Glyphs';
+        top: 50%;
+        right: 1em;
+        font-size: 1.2em;
+        pointer-events: none;
+    }
+
+    &-option {
+        padding: 0.8em;
+    }
+}
+
+.admin-form {
+    width: 100%;
+}

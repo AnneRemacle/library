@@ -1,0 +1,38 @@
+/* Library
+ *
+ * /sass/components/_footer.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.footer {
+    background: $laborTextColor;
+    color:white;
+    padding: 3em;
+    &-top {
+        width: 60%;
+        margin: 0 auto;
+    }
+    &-left {
+        width: 45%;
+        display: inline-block;
+    }
+    &-right {
+        width: 45%;
+        display: inline-block;
+        text-align: right;
+    }
+    &__title {
+        font-size: 1.5em;
+    }
+    &__link {
+        text-decoration: none;
+        color:white;
+    }
+    &-bottom {
+        font-size: 0.7em;
+        padding: 4em 0 0;
+        margin-left: 10%;
+    }
+}

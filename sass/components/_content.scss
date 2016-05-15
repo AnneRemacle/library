@@ -1,0 +1,28 @@
+/* Library
+ *
+ * /sass/components/_content.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.content {
+    padding-bottom: 6.25em;/*100px*/
+    &__section {
+        width: 83.71%; /*1172px*/
+        margin: 0 auto;
+    }
+    &-admin {
+        display: inline-block;
+        width: 50%;
+        
+    }
+}
+
+.section {
+    padding: 2em 0;
+    &__title {
+        font-size: $sectionTitle;
+        padding-bottom: 1.25em; /*20px*/
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblio - Modifier un livre</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+    <body>
+        <header class="header">
+            <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
+            <div class="header-top">
+                <a href="../index.html" title="Retour à la page d'accueil" class="header-top__container">
+                    <img class="header-top__logo" src="../assets/img/logo-white.png" alt="Logo de la bibliothèque" width="110" height="210" />
+                </a>
+                <div class="header-top__nav nav">
+                    <a href="administration.html" class="header-top__nav--item nav__item nav__item-connect">Connecté en tant que<br> Pol Ochon</a>
+                    <a href="logout.html" class="header-top__nav--item nav__item nav__item-connect">Se déconnecter</a>
+                </div>
+
+            </div>
+            <nav id="nav" class="header-bottom header-bottom__nav nav">
+                <h2 class="hidden">Navigation</h2>
+                <a class="header-bottom__nav--item nav__item" href="books.html" title="Voir tous les livres">Les livres</a>
+                <a class="header-bottom__nav--item nav__item" href="authors.html" title="Voir tous les auteurs">Les auteurs</a>
+                <a class="header-bottom__nav--item nav__item" href="editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+                <a class="header-bottom__nav--item nav__item" href="libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+            </nav>
+            <h2 class="header__punchline">Biblio - trouvez votre prochaine lecture!</h2>
+
+            <!-- <div class="part header__icons">
+                <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
+                <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
+            </div> -->
+
+
+
+            <!-- <div class="part header__right">
+                <a class="nav__item nav__item--right" href="html/connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i></a>
+                <a class="nav__item nav__item--right" href="html/subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i></a>
+            </div> -->
+
+        </header>
+
+        <section class="content content-admin clearfix">
+    	    <h1 class="content__title">Modifier le profil de Pol Ochon</h1>
+
+            <form class="admin-form" action="#" method="post">
+
+                <div class="form-group">
+                    <label class="form-label" for="login">Nom d'utilisateur</label>
+                    <input class="form-control" type="text" name="login" id="login" placeholder="Pol Ochon">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="exemple@exemple.com" />
+                </div>
+
+                 <div class="form-group">
+                    <label class="form-label" for="password">Choisissez un mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" />
+                </div>
+
+                <div class="form-group">
+                    <input class="form-button" type="submit" name="modify" value="Enregistrer les modifications" />
+                </div>
+            </form>
+        </section>
+
+        <aside class="aside clearfix">
+            <h2 class="hidden">Menu de l'espace perso</h2>
+            <nav class="aside__nav">
+                <h3 class="aside__nav-title">Que voulez-vous faire?</h3>
+                <ul>
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="administration.html">Mon profil</a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="add-book.html">Ajouter un livre</a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__nav-link" href="modify.html">Modifier mon profil</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </body>
+</html>

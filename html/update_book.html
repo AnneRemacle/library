@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblio - Modifier un livre</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
+        <div class="header-top">
+            <a href="../index.html" title="Retour à la page d'accueil" class="header-top__container">
+                <img class="header-top__logo" src="../assets/img/logo-white.png" alt="Logo de la bibliothèque" />
+            </a>
+            <div class="header-top__nav nav">
+                <a href="connexion.html" class="header-top__nav--item nav__item">Se connecter</a>
+                <a href="subscribe.html" class="header-top__nav--item nav__item">S'inscrire</a>
+                <a href="logout.html" class="header-top__nav--item nav__item">Se déconnecter</a>
+            </div>
+            <!-- <form  class="header-top__form" action="#" method="post">
+                <input class="header-top__form--input" type="search" name="research" value="Faire une recherche" />
+                <button class="header-top__form--button" type="submit" value="Chercher">
+            </form> -->
+        </div>
+        <nav id="nav" class="header-bottom header-bottom nav">
+            <h2 class="hidden">Navigation</h2>
+            <a class="header-bottom__item nav__item" href="html/books.html" title="Voir tous les livres">Les livres</a>
+            <a class="header-bottom__item nav__item" href="html/authors.html" title="Voir tous les auteurs">Les auteurs</a>
+            <a class="header-bottom__item nav__item" href="html/editors.html" title="Voir tous les éditeurs">Les éditeurs</a>
+            <a class="header-bottom__item nav__item" href="html/libraries.html" title="Voir la liste des bibliothèques">Les bibliothèques</a>
+            <a class="header-bottom__item nav__item" href="html/connexion.html" title="Vers l'espace personnel">Connexion</a>
+            <a class="header-bottom__item nav__item" href="html/subscribe.html" title="S'inscrire sur le site">Inscription</a>
+        </nav>
+        <h2 class="header__punchline">Biblio - trouvez votre prochaine lecture!</h2>
+
+        <!-- <div class="part header__icons">
+            <a class="nav__icons header__icons-open" href="#nav"><i class="fa fa-bars fa-2x"></i></a>
+            <a class="nav__icons header__icons-close" href="#"><i class="fa fa-times fa-2x"></i></a>
+        </div> -->
+
+
+
+        <!-- <div class="part header__right">
+            <a class="nav__item nav__item--right" href="html/connexion.html" title="Vers l'espace personnel"><i class="fa fa-user fa-2x"></i></a>
+            <a class="nav__item nav__item--right" href="html/subscribe.html" title="S'inscrire sur le site"><i class="fa fa-user-plus fa-2x"></i></a>
+        </div> -->
+
+    </header>
+
+    <section class="infos">
+	<h1>Modifier un livre</h1>
+    </section>
+    <section class="admin_form">
+    	<form action="#" method="post">
+    		<div>
+    			<label for="title">Titre :</label>
+    			<input type="text" name="title" id="title" placeholder="ex: Le Trône de Fer">
+    		</div>
+            <div>
+    			<label for="summary">Résumé :</label>
+    			<textarea name="summary" id="summary" rows="10" placeholder="ex: C'est trois nains… et ils vont à la mine…"></textarea>
+    		</div>
+            <div>
+    			<label for="cover_url">Sélectionnez la couverture du livre</label>
+    			<input type="file" name="cover_url" class="">
+		    </div>
+            <div>
+                <label for="isbn">N° ISBN :</label>
+                <input type="text" name="isbn" id="isbn" placeholder="ex: 978-2266154123">
+            </div>
+            <div>
+                <label for="published_at">Date de publication :</label>
+                <input type="text" name="published_at" id="published_at" placeholder="ex: 12/03/2009">
+            </div>
+            <div>
+    			<label for="pages">Nombre de pages :</label>
+    			<input type="text" name="pages" id="pages" placeholder="ex: 666">
+		    </div>
+
+
+    		<div>
+    			<label for="author_id">Choisissez un auteur :</label>
+    			<select name="author_id" id="author_id">
+    					<option value="George R.R. Martin">George R.R. Martin</option>
+                        <option value="J.R.R. Tolkien">J.R.R. Tolkien</option>
+                        <option value="Agatha Christie">Agatha Christie</option>
+
+    			</select>
+    			<label for="author_name">Ou ajoutez-en un nouveau :</label>
+    			<input type="text" name="author_name" id="author_name" placeholder="ex: C.S. Lewis">
+    		</div>
+            <div>
+    			<label for="nationality_id">Et sa nationalité :</label>
+    			<select name="nationality_id" id="nationality_id">
+    					<option value="Anglais">Anglais</option>
+                        <option value="Américain">Américain</option>
+                        <option value="Français">Français</option>
+
+    			</select>
+    			<label for="nationality">Ou ajoutez-en une :</label>
+    			<input type="text" name="nationality" id="nationality" placeholder="ex: Suisse">
+    		</div>
+            <div>
+    			<label for="photo_url">Sélectionnez sa photo</label>
+    			<input type="file" name="photo_url" class="">
+		    </div>
+            <div>
+                <label for="birth_date">Date de naissance :</label>
+                <input type="text" name="birth_date" id="birth_date" placeholder="ex: 12/03/2009">
+            </div>
+            <div>
+                <label for="death_date">Date de décès :</label>
+                <input type="text" name="death_date" id="death_date" placeholder="ex: 12/03/2009">
+            </div>
+
+            <div>
+    			<label for="editor_id">Choisissez un éditeur :</label>
+    			<select name="editor_id" id="editor_id">
+    					<option value="J'ai Lu">J'ai Lu</option>
+                        <option value="Bragelonne">Bragelonne</option>
+                        <option value="Pygmalion">Pygmalion</option>
+
+    			</select>
+    			<label for="editor_name">Ou ajoutez-en un nouveau :</label>
+    			<input type="text" name="editor_name" id="editor_name" placeholder="ex: Pocket">
+    		</div>
+
+
+    		<div>
+    			<input type="submit" value="Publier">
+    		</div>
+    	</form>
+    </section>
+    </body>
+</html>
