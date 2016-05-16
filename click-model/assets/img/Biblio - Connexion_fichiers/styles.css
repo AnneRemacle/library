@@ -235,9 +235,6 @@ body {
     width: 83.71%;
     /*1172px*/
     margin: 0 auto; }
-  .content-admin {
-    display: inline-block;
-    width: 50%; }
 
 .section {
   padding: 2em 0; }
@@ -301,9 +298,7 @@ body {
     width: 54%;
     /*291,6px*/
     vertical-align: top;
-    padding: .5em 2%;
-    height: 25em;
-    /*400px*/ }
+    padding: .5em 2%; }
   .books__card--title {
     font-size: 1.5em;
     line-height: 1.2;
@@ -346,19 +341,13 @@ body {
   .authors__card--img {
     display: inline-block;
     width: 40%;
-    height: auto;
-    background: url("../../assets/img/no_pic_person.png") center no-repeat;
-    background-size: contain;
-    min-height: 12.5em;
-    /*200px*/ }
+    height: auto; }
   .authors__card-right {
     display: inline-block;
     width: 54%;
     /*291,6px*/
     vertical-align: top;
-    padding: .5em 2%;
-    height: 25em;
-    /*400px*/ }
+    padding: .5em 2%; }
   .authors__card--title {
     font-size: 1.5em;
     line-height: 1.2;
@@ -620,7 +609,7 @@ body {
     /*100px*/ }
   .others__item {
     margin-bottom: 0.5em; }
-  .others__link:before {
+  .others__item:before {
     color: #272727;
     content: "";
     font-family: 'Glyphs';
@@ -630,10 +619,6 @@ body {
   .others__link {
     text-decoration: none;
     color: #272727; }
-  .others__link:after {
-    border: none;
-    content: "";
-    margin-right: 0.8em; }
   .others__link:hover {
     border-bottom: 1px solid #272727;
     transition: .3s ease; }
@@ -667,19 +652,6 @@ body {
 
 .content__text--strong {
   font-size: 1.2em; }
-
-.others__modify {
-  text-decoration: none;
-  color: #272727; }
-
-.others__modify:before {
-  margin-right: .3em;
-  content: "";
-  font-family: 'Glyphs'; }
-
-.others__modify:hover {
-  border-bottom: 1px solid #272727;
-  transition: .3s ease; }
 
 .aside {
   background: #e8e8e8;

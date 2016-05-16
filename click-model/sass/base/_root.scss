@@ -1,0 +1,15 @@
+/* Library
+ *
+ * /sass/base/_root.scss - Base styles for root element
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+
+ body {
+     width: 100%;
+     background: $mainBgColor;
+     font: normal 16px/1.5 $helveticaStack;
+     color: $laborTextColor;
+ }

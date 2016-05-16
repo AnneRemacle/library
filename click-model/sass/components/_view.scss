@@ -1,0 +1,94 @@
+/* Library
+ *
+ * /sass/components/_view.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+ .view {
+     width: 100%;
+     margin-bottom: 2em;
+
+     &__left {
+         display: inline-block;
+         width: 25.59%;/*300px*/
+         float:left;
+         margin: 0 2.73% 0 0; /*32px*/
+     }
+     &__cover {
+         width: 100%;
+     }
+     &__right {
+        display: inline-block;
+        width: 55%;
+        float:left;
+     }
+     &__text {
+        margin-bottom: 0.8em;
+     }
+     &-strong {
+        display: inline-block;
+        font-size: $middle;
+     }
+     &__link {
+        text-decoration: none;
+        color:$laborTextColor;
+        font-size: 1.2em;
+     }
+     &__link:hover {
+         text-decoration: underline;
+     }
+     &__info {
+         font-size: 1.2em;
+     }
+     &__list {
+         margin-left: 1.5em;
+     }
+     &__item {
+         margin: 0.5em 0;
+         &--strong {
+             font-size: 1.2em;
+         }
+     }
+ }
+
+ .others {
+     margin-bottom: 3.5em;
+     &__title {
+        font-size: $middle;
+        margin-bottom: 1em;
+     }
+     &__list {
+        margin-left: 7.14%; /*100px*/
+     }
+     &__item {
+        margin-bottom: 0.5em;
+     }
+     &__link:before {
+         color:$laborTextColor;
+         content:"";
+         font-family: 'Glyphs';
+         cursor: pointer;
+         display: inline-block;
+         margin-right: 0.3em;
+     }
+     &__link {
+        text-decoration: none;
+        color:$laborTextColor;
+     }
+     &__link:after {
+         border:none;
+         content:"";
+         margin-right: 0.8em;
+     }
+     &__link:hover {
+         border-bottom: 1px solid $laborTextColor;
+         transition: .3s ease;
+     }
+ }
+
+ #gmap {
+     height: 375px;
+     background: silver;
+ }

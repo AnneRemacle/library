@@ -1,0 +1,53 @@
+/* Library
+ *
+ * /sass/components/_index-libraries.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+ .libraries {
+     &__item {
+         display: inline-block;
+         width: 40%;
+         margin-bottom: 3.5em;
+        vertical-align: middle;
+     }
+     &__item:nth-child(odd) {
+         margin-right: 10%;
+     }
+     &__all {
+         display: inline-block;
+         text-decoration: none;
+         color: $laborTextColor;
+         width: 50%;
+         vertical-align: middle;
+         float:left;
+     }
+     &__name {
+        display: block;
+        font-size: $middle;
+        margin-bottom: 1em;
+        line-height: 0;
+     }
+     &__link {
+        display: inline-block;
+        text-decoration: none;
+        color:white;
+        background: $laborTextColor;
+        padding: 0.5em 1em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-right: 3em;
+        float:right;
+        vertical-align: middle;
+        border: 1px solid transparent;
+     }
+     &__link:hover {
+         border: 1px solid $laborTextColor;
+         background: white;
+         color: $laborTextColor;
+         transition: .3s ease;
+     }
+
+ }

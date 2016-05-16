@@ -17,12 +17,16 @@
             display: inline-block;
             width: 40%;
             height: auto;
+            background: url('../../assets/img/no_pic_person.png') center no-repeat;
+            background-size: contain;
+            min-height: 12.5em; /*200px*/
         }
         &-right {
             display: inline-block;
             width: 54%; /*291,6px*/
             vertical-align: top;
             padding: .5em 2%;
+            height: 25em; /*400px*/ //TMP
         }
         &--title {
             font-size: $middle;

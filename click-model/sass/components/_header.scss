@@ -1,0 +1,103 @@
+/* Library
+ *
+ * /sass/components/_header.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.header {
+    background: $headerGradient, url("../../assets/img/header-bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 36.25em;
+    padding-bottom: 3em;
+    &-top {
+
+        &__container {
+            display: block;
+            width: 5.28%; /*74px*/
+            margin: 0 auto;
+            padding: 2.5em 0 4em; /*40px*/
+        }
+        &__logo {
+            width: 100%;
+            height: auto;
+        }
+        &__nav {
+            display: inline-block;
+            float: right;
+            margin-right: 7.142%; /*100px*/
+            width: 35.71%; /*500px*/
+            margin-top: -11em;
+            &--item {
+                width: 42.78%; /*175px*/
+                text-align: center;
+                margin-right: 3.28%; /*46px*/
+
+            }
+        }
+        &__form {
+
+            &--input {
+                width: 48.89%; /*200px*/
+                height: 2.5em;
+                margin: 1.25em 0 0; /*20px 0 0 10px*/
+                border:none
+            }
+            &--input:focus {
+                border: 1px solid rgba(128, 0, 128, 0.4);
+            }
+            &--button {
+                width: 2.5em;
+                height: 2.5em;
+                vertical-align: middle;
+                background: white url(../../assets/img/search.png) center no-repeat;
+                background-size: cover;
+                border:none;
+            }
+        }
+    }
+    &-bottom {
+        background: $laborTextColor;
+        height: 4em;
+        &__nav {
+            text-align: center;
+            &--item + .header-bottom__nav--item {
+                margin-left: 2em; /*32px*/
+            }
+            &--item {
+                padding: 0.5em 1em;
+            }
+            &--item:hover {
+                padding: 0.5em 1em;
+            }
+        }
+    }
+    &__punchline {
+        font-size: 2em;
+        color:white;
+        text-align: center;
+        padding: 1em 0;
+    }
+}
+
+.nav {
+    &__item {
+        display: inline-block;
+        text-decoration: none;
+        color: $linksLight;
+        font-size: $middle;
+        padding: .5em 1em;
+        border: 2px solid transparent;
+        &-connect {
+            font-size: 1em;
+            vertical-align: middle;
+        }
+    }
+    &__item:hover, .nav__item:focus {
+        background: $headerLinksBgHover;
+        color: $laborTextColor;
+        border: 2px solid $laborTextColor;
+        transition: .3s ease-in-out;
+    }
+}

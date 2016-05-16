@@ -1,0 +1,57 @@
+/* Library
+ *
+ * /sass/components/_index-books.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.content {
+    width: 83.71%; /*1172px*/ /*1000px*/
+    margin: 0 auto; /*100px*/
+    &__title {
+        font-size: $sectionTitle;
+        padding-bottom: 1.25em; /*20px*/
+    }
+}
+
+.list {
+    width: 100%;
+    margin: 0 auto 3em;
+    &__item {
+        display: inline-block;
+        width: 39.28%; /*500px*/
+        margin-bottom: 3.5em;
+        &--img {
+            display: inline-block;
+            width: 25%; /*125px*/
+            float:left;
+            height: auto;
+            margin: 0 10px 10px 0;
+        }
+        &--title {
+            line-height: 1;
+            display: block;
+            font-size: $middle;
+            vertical-align: top;
+            margin-bottom: 0.8em;
+        }
+        &--text {
+            display: inline;
+            margin-bottom: 1em;
+        }
+        &--link {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $laborTextColor;
+            text-align: right;
+        }
+        &--link:hover {
+            text-decoration: underline;
+        }
+    }
+    &__item:nth-child(odd) {
+        margin-right: 6.4%; /*32px*/
+    }
+}

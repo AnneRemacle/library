@@ -1,0 +1,21 @@
+/* Sur un baobab
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+ .hidden {
+     display: none;
+ }
+
+ .clearfix:before,
+ .clearfix:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .clearfix:after {
+     clear: both;
+ }

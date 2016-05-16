@@ -1,0 +1,52 @@
+/* Library
+ *
+ * /sass/components/_index-authors-editors.scss
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+.picture-list {
+    margin-bottom: 5em;
+    &__item {
+        display: inline-block;
+        width: 17.06%; /*200px*/
+        margin-left: 5.46%;/*64px*/
+        background: $cardsBgColor;
+        margin-bottom: 3em;
+
+    }
+    &__item:nth-child(4n+1) {
+        //margin-left: 0px;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url('../../assets/img/no_pic_person.png') center no-repeat;
+        background-size: cover;
+        min-height: 12.5em; /*200px*/
+    }
+    &__name {
+        display: block;
+        text-align: center;
+        padding: 0.5em 0;
+        font-size:$middle;
+    }
+    &__link {
+        display: block;
+        text-align: center;
+        background: $laborTextColor;
+        text-decoration: none;
+        color:white;
+        border: 1px solid transparent;
+        padding: 0.5em 0;
+    }
+    &__link:hover {
+        border: 1px solid $laborTextColor;
+        background: transparent;
+        color: $laborTextColor;
+        transition: .3s ease;
+    }
+}

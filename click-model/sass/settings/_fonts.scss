@@ -1,0 +1,22 @@
+/* Library
+ *
+ * /sass/settings/_fonts.scss - Global fonts variables & fonts loading
+ *
+ * coded by Anne
+ * started at 26/04/2016
+ */
+
+$helveticaStack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+@font-face {
+    font-family: 'Glyphs';
+    src: url('../../assets/fonts/fontawesome/fontawesome-webfont.eot');
+    src: url('../../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../assets/fonts/fontawesome/fontawesome-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+         url('../../assets/fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'),
+         url('../../assets/fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
