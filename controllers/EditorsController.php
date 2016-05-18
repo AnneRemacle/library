@@ -1,5 +1,5 @@
 <?php
-    namespace Controller;
+    namespace Controllers;
 
     use Models\Editors;
     use Models\Books;
@@ -17,7 +17,7 @@
             $editors = $this->editors_model->all();
             $view = 'indexEditors.php';
 
-            return ['editors' => $editors, 'view' => $view, 'page_title' => 'Biblio - Les éditeurs'];
+            return ['editors' => $editors, 'view' => $view, 'resource_title' => 'Biblio - Les éditeurs'];
         }
         public function show() {
             if (!isset($_GET['id'])) {
@@ -25,6 +25,7 @@
             }
             $id = intval($_GET['id']);
             $editor = $this->editors_model->find($id);
+            $nationality = $this->editors_model->getEditorNationality($id);
             $books = null;
             $authors = null;
 
@@ -48,8 +49,9 @@
 
 
             return ['editor' => $editor,
+                    'nationality' => $nationality,
                     'view' => $view,
-                    'page_title' => 'Biblio - '.$editor->name,
+                    'resource_title' => 'Biblio - '.$editor->name,
                     'books' => $book,
                     'authors' => $author
                 ];

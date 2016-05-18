@@ -1,5 +1,5 @@
 <?php
-    namespace Controller;
+    namespace Controllers;
 
     use Models\Authors;
     use Models\Books;
@@ -19,7 +19,7 @@
             return [
                 'authors' => $authors,
                 'view' => $view,
-                'page_title' => 'Biblio - Tous les auteurs'
+                'resource_title' => 'Biblio - Tous les auteurs'
             ];
         }
 
@@ -29,6 +29,7 @@
             }
             $id = intval($_GET['id']);
             $author = $this->authors_model->find($id);
+            $nationality = $this->authors_model->getAuthorNationality($id);
             $books = null;
             $editors = null;
 
@@ -50,9 +51,10 @@
 
             $view = 'showAuthors.php';
             return [
-                'author' = $author,
+                'author' => $author,
+                'nationality' => $nationality,
                 'view' => $view,
-                'page_title' => 'Biblio - La fiche de '.$author->name,
+                'resource_title' => 'Biblio - La fiche de '.$author->name,
                 'books' => $books,
                 'editors' => $editors
             ];

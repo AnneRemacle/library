@@ -5,7 +5,7 @@
 
         protected $table = 'editors';
 
-        public function getEditorByBookId($id) {
+        public function getEditorsByBookId($id) {
             $sql = 'SELECT editors.*
                     FROM editors
                     JOIN books
@@ -30,6 +30,17 @@
 
             $pdoSt = $this->cn->prepare($sql);
             $pdoSt->execute([':id' => $id]);
-            return $proSt->fetchAll();
+            return $pdoSt->fetchAll();
+        }
+        public function getEditorNationality($id) {
+            $sql = 'SELECT nationalities.*
+	                FROM nationalities
+	                JOIN editors ON
+                    editors.id = :id
+                    WHERE nationalities.id = editors.nationality_id';
+
+            $pdoSt = $this->cn->prepare($sql);
+            $pdoSt->execute([':id' => $id]);
+            return $pdoSt->fetch();
         }
     }

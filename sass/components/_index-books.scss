@@ -22,12 +22,14 @@
         display: inline-block;
         width: 39.28%; /*500px*/
         margin-bottom: 3.5em;
+        min-height: 15.265em; /*350px*/ //TMP
         &--img {
             display: inline-block;
             width: 25%; /*125px*/
             float:left;
             height: auto;
-            margin: 0 10px 10px 0;
+            margin: 0 0.625em 2em 0;
+            vertical-align: top;
         }
         &--title {
             line-height: 1;
@@ -41,6 +43,7 @@
             margin-bottom: 1em;
         }
         &--link {
+            margin-top: 1.5em;
             display: block;
             text-decoration: none;
             text-transform: uppercase;
@@ -53,5 +56,7 @@
     }
     &__item:nth-child(odd) {
         margin-right: 6.4%; /*32px*/
+        display: inline-block;
+        vertical-align: top;
     }
 }

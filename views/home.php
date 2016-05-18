@@ -13,7 +13,7 @@
                         <?php echo substr($book->summary, 0, 250); ?>…
                     </p>
                 </div>
-                <a class="books__card--button" href="index.php?a=show&e=books&id=<?php echo $book -> id; ?>&with=authors,editors" title="Voir la fiche du livre le trône de fer">Voir la fiche</a>
+                <a class="books__card--button" href="index.php?a=show&e=books&id=<?php echo $book -> id; ?>&with=authors,editors,libraries" title="Voir la fiche du livre le trône de fer">Voir la fiche</a>
             </section>
         <?php endforeach; ?>
     </section>
@@ -31,7 +31,7 @@
                         <?php echo substr($author->bio, 0, 250); ?>…
                     </p>
                 </div>
-                <a class="authors__card--button" href="html/view-author.html" title="Voir la fiche de George R.R. Martin">Voir la fiche</a>
+                <a class="authors__card--button" href="index.php?a=show&e=authors&id=<?php echo $author -> id; ?>&with=books,editors" title="Voir la fiche de George R.R. Martin">Voir la fiche</a>
             </section>
         <?php endforeach; ?>
 

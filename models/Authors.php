@@ -34,4 +34,16 @@
             $pdoSt->execute([':id' => $id]);
             return $pdoSt->fetchAll();
         }
+
+        public function getAuthorNationality($id) {
+            $sql = 'SELECT nationalities.*
+	                FROM nationalities
+	                JOIN authors ON
+                    authors.id = :id
+                    WHERE nationalities.id = authors.nationality_id';
+
+            $pdoSt = $this->cn->prepare($sql);
+            $pdoSt->execute([':id' => $id]);
+            return $pdoSt->fetch();
+        }
     }

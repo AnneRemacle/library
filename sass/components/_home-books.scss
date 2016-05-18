@@ -7,6 +7,7 @@
  */
 
 .books {
+    margin-bottom: 4em;
     &__card {
         background: $cardsBgColor;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);

@@ -54,6 +54,11 @@
 .clearfix:after {
   clear: both; }
 
+.sro {
+  position: absolute;
+  top: -99999px;
+  left: -99999px; }
+
 /* CV Anne
  *
  * /sass/generic/_meyer-reset.scss - Eric Meyer's CSS reset - http://meyerweb.com/eric/tools/css/reset/
@@ -132,7 +137,8 @@ body {
   width: 100%;
   background: #dfdfdf;
   font: normal 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #272727; }
+  color: #272727;
+  position: relative; }
 
 /* Library
  *
@@ -284,49 +290,50 @@ body {
  * coded by Anne
  * started at 26/04/2016
  */
-.books__card {
-  background: #ffffff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  width: 48.634%;
-  /*570px*/
-  display: inline-block;
-  margin-bottom: 2em;
-  /*48px*/ }
-  .books__card--img {
+.books {
+  margin-bottom: 4em; }
+  .books__card {
+    background: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    width: 48.634%;
+    /*570px*/
     display: inline-block;
-    width: 40%;
-    height: auto; }
-  .books__card-right {
-    display: inline-block;
-    width: 54%;
-    /*291,6px*/
-    vertical-align: top;
-    padding: .5em 2%;
-    height: 25em;
-    /*400px*/ }
-  .books__card--title {
-    font-size: 1.5em;
-    line-height: 1.2;
-    margin-bottom: .5em; }
-  .books__card--button {
-    text-decoration: none;
-    display: inline-block;
-    color: #ffffff;
-    background: #272727;
-    padding: .8em 0;
-    text-align: center;
-    width: 100%;
-    margin-top: 1em;
-    border: 2px solid transparent; }
-  .books__card--button:hover {
-    color: #272727;
-    border: 2px solid #272727;
-    background: transparent;
-    transition: .3s ease-in-out; }
-
-.books__card:nth-child(even) {
-  margin-right: 1.562%;
-  /*20px;*/ }
+    margin-bottom: 2em;
+    /*48px*/ }
+    .books__card--img {
+      display: inline-block;
+      width: 40%;
+      height: auto; }
+    .books__card-right {
+      display: inline-block;
+      width: 54%;
+      /*291,6px*/
+      vertical-align: top;
+      padding: .5em 2%;
+      height: 25em;
+      /*400px*/ }
+    .books__card--title {
+      font-size: 1.5em;
+      line-height: 1.2;
+      margin-bottom: .5em; }
+    .books__card--button {
+      text-decoration: none;
+      display: inline-block;
+      color: #ffffff;
+      background: #272727;
+      padding: .8em 0;
+      text-align: center;
+      width: 100%;
+      margin-top: 1em;
+      border: 2px solid transparent; }
+    .books__card--button:hover {
+      color: #272727;
+      border: 2px solid #272727;
+      background: transparent;
+      transition: .3s ease-in-out; }
+  .books__card:nth-child(even) {
+    margin-right: 1.562%;
+    /*20px;*/ }
 
 /* Library
  *
@@ -408,14 +415,17 @@ body {
     display: inline-block;
     width: 39.28%;
     /*500px*/
-    margin-bottom: 3.5em; }
+    margin-bottom: 3.5em;
+    min-height: 15.265em;
+    /*350px*/ }
     .list__item--img {
       display: inline-block;
       width: 25%;
       /*125px*/
       float: left;
       height: auto;
-      margin: 0 10px 10px 0; }
+      margin: 0 0.625em 2em 0;
+      vertical-align: top; }
     .list__item--title {
       line-height: 1;
       display: block;
@@ -426,6 +436,7 @@ body {
       display: inline;
       margin-bottom: 1em; }
     .list__item--link {
+      margin-top: 1.5em;
       display: block;
       text-decoration: none;
       text-transform: uppercase;
@@ -435,7 +446,9 @@ body {
       text-decoration: underline; }
   .list__item:nth-child(odd) {
     margin-right: 6.4%;
-    /*32px*/ }
+    /*32px*/
+    display: inline-block;
+    vertical-align: top; }
 
 /* Library
  *
@@ -490,20 +503,30 @@ body {
     /*64px*/
     background: #ffffff;
     margin-bottom: 3em; }
+  .picture-list__figure {
+    min-height: 12.5em; }
   .picture-list__img {
     width: 100%;
     height: auto;
     display: inline-block;
     vertical-align: middle;
-    background: url("../../assets/img/no_pic_person.png") center no-repeat;
-    background-size: cover;
+    background-size: contain;
     min-height: 12.5em;
     /*200px*/ }
+  .picture-list__logo {
+    width: 70%;
+    height: auto;
+    margin: 1.5em auto;
+    display: block;
+    text-align: center; }
   .picture-list__name {
     display: block;
     text-align: center;
-    padding: 0.5em 0;
-    font-size: 1.5em; }
+    padding: 0.5em;
+    font-size: 1.5em;
+    height: 4em;
+    /* TMP*/
+    line-height: 1.5em; }
   .picture-list__link {
     display: block;
     text-align: center;

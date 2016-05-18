@@ -1,5 +1,5 @@
 <?php
-    namespace Controller;
+    namespace Controllers;
 
     use Models\Editors;
     use Models\Books;
@@ -20,7 +20,7 @@
             return [
                 'libraries' => $libraries,
                 'view' => $view,
-                'page_title' => 'Biblio - Les Bibliothèques'
+                'resource_title' => 'Biblio - Les Bibliothèques'
             ];
         }
 
@@ -54,7 +54,7 @@
             return [
                 'library' => $library,
                 'view' => $view,
-                'page_title' => 'Biblio - '.$library->name,
+                'resource_title' => 'Biblio - '.$library->name,
                 'books' => $book,
                 'authors' => $author
             ];

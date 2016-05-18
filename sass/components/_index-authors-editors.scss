@@ -14,25 +14,36 @@
         margin-left: 5.46%;/*64px*/
         background: $cardsBgColor;
         margin-bottom: 3em;
-
     }
     &__item:nth-child(4n+1) {
         //margin-left: 0px;
+    }
+    &__figure {
+        min-height: 12.5em;
     }
     &__img {
         width: 100%;
         height: auto;
         display: inline-block;
         vertical-align: middle;
-        background: url('../../assets/img/no_pic_person.png') center no-repeat;
-        background-size: cover;
+        //background: url('../../assets/img/no_pic_person.png') center no-repeat;
+        background-size: contain;
         min-height: 12.5em; /*200px*/
+    }
+    &__logo {
+        width: 70%;
+        height: auto;
+        margin: 1.5em auto;
+        display: block;
+        text-align: center;
     }
     &__name {
         display: block;
         text-align: center;
-        padding: 0.5em 0;
+        padding: 0.5em;
         font-size:$middle;
+        height: 4em; /* TMP*/
+        line-height: $middle;
     }
     &__link {
         display: block;
