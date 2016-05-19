@@ -13,7 +13,7 @@
     <?php else: ?>
         <?php $user = json_decode($_SESSION['user']); ?>
         <div class="header-top__nav nav">
-            <a href="index.php?a=admin&r=page" class="header-top__nav--item nav__item">Connecté en tant que <?php echo $user->pseudo?$user->pseudo:$user->email; ?></a>
+            <a href="index.php?a=admin&r=page&with=books,comments" class="header-top__nav--item nav__item">Connecté en tant que <?php echo $user->pseudo?$user->pseudo:$user->email; ?></a>
             <a href="index.php?a=getLogout&r=auth" class="header-top__nav--item nav__item">Se déconnecter</a>
         </div>
     <?php endif; ?>

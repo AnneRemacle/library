@@ -56,4 +56,18 @@
             return $pdoSt->fetchAll();
         }
 
+        public function getBooksByUserId($id) {
+            $sql = 'SELECT books.*
+                    FROM books
+                    JOIN book_user
+                    ON books.id = book_user.book_id
+                    JOIN users
+                    ON book_user.user_id = users.id
+                    WHERE users.id= :id';
+
+            $pdoSt = $this->cn->prepare($sql);
+            $pdoSt -> execute(['id' => $id]);
+            return $pdoSt->fetchAll();
+        }
+
     }
