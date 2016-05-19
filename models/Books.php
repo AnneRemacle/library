@@ -31,6 +31,20 @@
             return $pdoSt->fetchAll();
         }
 
+        public function getBooksByLibraryId($id) {
+            $sql = 'SELECT books.*
+                    FROM books
+                    JOIN book_library
+                    ON books.id = book_library.book_id
+                    JOIN libraries
+                    ON book_library.library_id = libraries.id
+                    WHERE libraries.id = :id';
+
+            $pdoSt = $this->cn->prepare($sql);
+            $pdoSt->execute(['id' => $id]);
+            return $pdoSt->fetchAll();
+        }
+
         public function four() {
             $sql = 'SELECT books.*
                     FROM books
