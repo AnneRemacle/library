@@ -244,6 +244,31 @@ body {
   .content-admin {
     display: inline-block;
     width: 50%; }
+  .content__forgot {
+    text-align: center;
+    text-decoration: none;
+    color: #272727;
+    display: block; }
+  .content__forgot:hover {
+    text-decoration: underline;
+    transition: .3s ease; }
+  .content__new {
+    text-align: center; }
+    .content__new-text {
+      font-size: 1.5em; }
+    .content__new-button {
+      text-decoration: none;
+      color: #272727;
+      display: block;
+      font-size: 1.2em; }
+    .content__new-button:hover {
+      text-decoration: underline;
+      transition: .3s ease; }
+
+.form-after {
+  display: block;
+  width: 50%;
+  margin: 0 auto; }
 
 .section {
   padding: 2em 0; }
@@ -568,8 +593,7 @@ body {
 .libraries__name {
   display: block;
   font-size: 1.5em;
-  margin-bottom: 1em;
-  line-height: 0; }
+  margin-bottom: 1em; }
 
 .libraries__link {
   display: inline-block;
