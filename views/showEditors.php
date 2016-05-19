@@ -34,9 +34,9 @@
 
     <section class="others">
         <h2 class="others__title">Tous les livres publiés par <?php echo $data['editor'] -> name;?></h2>
-        <?php if( $data[ 'editors' ] ): ?>
+        <?php if( $data[ 'books' ] ): ?>
             <ul class="others__list">
-                <?php foreach( $data[ 'editors' ] as $editor ): ?>
+                <?php foreach( $data[ 'books' ] as $book ): ?>
                     <li class="others__item">
                         <a class="others__link" href="?a=show&r=books&id=<?php echo $book -> id; ?>&with=authors,editors,libraries">
                             <?php echo $book -> title; ?>
@@ -44,40 +44,31 @@
                     </li>
                 <?php endforeach; ?>
             </ul>
+        <?php else: ?>
+            <p>
+                Il n'y a pas de livre à afficher pour le moment.
+            </p>
         <?php endif; ?>
 
-        <ul class="others__list">
-            <li class="others__item">
-                <a class="others__link" href="view-book.html">Le Trône de Fer</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-book.html">Le Trône de Fer</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-book.html">Le Trône de Fer</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-book.html">Le Trône de Fer</a>
-            </li>
-        </ul>
     </section>
 
     <section class="others">
-        <h2 class="others__title">Les auteurs publiés par J'ai Lu</h2>
-        <ul class="others__list">
-            <li class="others__item">
-                <a class="others__link" href="view-editor.html">George R.R. Martin</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-editor.html">George R.R. Martin</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-editor.html">George R.R. Martin</a>
-            </li>
-            <li class="others__item">
-                <a class="others__link" href="view-editor.html">George R.R. Martin</a>
-            </li>
-        </ul>
+        <h2 class="others__title">Les auteurs publiés par <?php echo $data['editor']->name; ?></h2>
+        <?php if( $data[ 'authors' ] ): ?>
+            <ul class='others__list'>
+                <?php foreach( $data[ 'authors' ] as $author ): ?>
+                    <li class='others__item'>
+                        <a class="others__link" href="?a=show&r=authors&id=<?php echo $author -> id; ?>&with=books,editors" title="Voir le fiche de <?php $author->name; ?>">
+                            <?php echo $author -> name; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p>
+                Il n'y a pas d'auteur à afficher pour le moment.
+            </p>
+        <?php endif; ?>
     </section>
 
 </section>

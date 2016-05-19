@@ -10,5 +10,8 @@
         <?php include('partials/_header.php'); ?>
         <?php include($data['view']); ?>
         <?php include('partials/_footer.php'); ?>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAMZQV4ezcGLSS8Ec3cwUmH6lBRfVTKMo "></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>

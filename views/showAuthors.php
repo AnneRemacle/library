@@ -44,7 +44,7 @@
     </section>
 
     <section class="others">
-        <h2 role="heading" aria-level="2" class="others__title">Tous les livres de George R.R. Martin</h2>
+        <h2 role="heading" aria-level="2" class="others__title">Tous les livres de <?php echo $data['author']->name; ?></h2>
         <?php if( $data[ 'books' ] ): ?>
             <ul class="others__list">
                 <?php foreach( $data[ 'books' ] as $book ): ?>
@@ -55,11 +55,15 @@
                     </li>
                 <?php endforeach; ?>
             </ul>
+        <?php else: ?>
+            <p>
+                Il n'y a pas de livre à afficher pour le moment.
+            </p>
         <?php endif; ?>
     </section>
 
     <section class="others">
-        <h2 role="heading" aria-level="2" class="others__title">Les éditeurs qui ont publié George R.R. Martin</h2>
+        <h2 role="heading" aria-level="2" class="others__title">Les éditeurs qui ont publié <?php echo $data['author']->name; ?></h2>
         <?php if( $data[ 'editors' ] ): ?>
             <ul class="others__list">
                 <?php foreach( $data[ 'editors' ] as $editor ): ?>
@@ -70,6 +74,10 @@
                     </li>
                 <?php endforeach; ?>
             </ul>
+        <?php else: ?>
+            <p>
+                Il n'y a pas d'éditeur à afficher pour le moment.
+            </p>
         <?php endif; ?>
     </section>
 
