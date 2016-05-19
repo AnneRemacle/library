@@ -15,8 +15,40 @@
     &-admin {
         display: inline-block;
         width: 50%;
-        
+
     }
+    &__forgot {
+        text-align: center;
+        text-decoration: none;
+        color: $laborTextColor;
+        display: block;
+    }
+    &__forgot:hover {
+        text-decoration: underline;
+        transition: .3s ease;
+    }
+    &__new {
+        text-align: center;
+        &-text {
+            font-size: $middle;
+        }
+        &-button {
+            text-decoration: none;
+            color: $laborTextColor;
+            display: block;
+            font-size: 1.2em;
+        }
+        &-button:hover {
+            text-decoration: underline;
+            transition: .3s ease;
+        }
+    }
+}
+
+.form-after {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
 }
 
 .section {
