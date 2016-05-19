@@ -7,7 +7,7 @@
 
         private $user_model = null;
 
-        public function __construc(User $user) {
+        public function __construct(User $user) {
             $this->user_model = $user;
         }
 
@@ -43,7 +43,7 @@
 
             if(empty($_POST['email'])) {
                 $errors['email'] = 'Veuillez entrer votre adresse email';
-            } elseif(strpos($_POST['email'],'@')) {
+            } elseif(strpos($_POST['email'],'@')===false) {
                 $errors['email'] = "Veuillez entrer une adresse email valide";
             }
 
@@ -51,6 +51,10 @@
                 $errors['password'] = 'Veuillez entrer un mot de passe';
             } elseif(strlen($_POST['password']) < 6) {
                 $errors['password'] = 'Veuillez entrer un mot de passe d’au moins 6 caractères';
+            }
+
+            if(empty($_POST['pseudo'])) {
+                $errors['pseudo'] = 'Veuillez entrer un pseudo';
             }
 
             if(count($errors)) {

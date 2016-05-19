@@ -37,7 +37,7 @@
                 $with = explode(',', $_GET['with']);
                 if(in_array('books', $with)) {
                     $books_model = new Books();
-                    $book = $books_model->getBooksByLibraryId($library->id);
+                    $books = $books_model->getBooksByLibraryId($library->id);
                 }
             }
 
@@ -55,8 +55,8 @@
                 'library' => $library,
                 'view' => $view,
                 'resource_title' => 'Biblio - '.$library->name,
-                'books' => $book,
-                'authors' => $author
+                'books' => $books,
+                'authors' => $authors
             ];
         }
     }
