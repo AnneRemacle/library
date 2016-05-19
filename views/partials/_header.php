@@ -1,7 +1,7 @@
 <header class="header">
     <h1 class="hidden">Biblio - Trouvez votre prochaine lecture!</h1>
     <div class="header-top">
-        <a href="index.html" title="Retour à la page d'accueil" class="header-top__container">
+        <a href="index.php" title="Retour à la page d'accueil" class="header-top__container">
             <img class="header-top__logo" src="assets/img/logo-white.png" alt="Logo de la bibliothèque" width="110" height="210" />
         </a>
 
@@ -11,6 +11,7 @@
             <a href="index.php?a=getRegister&r=auth" class="header-top__nav--item nav__item">S'inscrire</a>
         </div>
     <?php else: ?>
+        <?php $user = json_decode($_SESSION['user']); ?>
         <div class="header-top__nav nav">
             <a href="index.php?a=admin&r=page" class="header-top__nav--item nav__item">Connecté en tant que <?php echo $user->pseudo?$user->pseudo:$user->email; ?></a>
             <a href="index.php?a=getLogout&r=auth" class="header-top__nav--item nav__item">Se déconnecter</a>
