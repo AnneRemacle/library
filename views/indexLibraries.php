@@ -11,7 +11,7 @@
                     Située à <?php echo $library->location; ?>
                 <?php endif; ?>
                 </a>
-                <a href="?a=show&r=libraries&id=<?php echo $library -> id; ?>&with=books,authors" class="libraries__link">Voir la fiche</a>
+                <a href="?a=show&r=libraries&id=<?php echo $library -> id; ?>&with=books" class="libraries__link">Voir la fiche</a>
             </li>
         <?php endforeach; ?>
     </ul>

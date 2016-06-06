@@ -15,11 +15,9 @@
 
     $controller_name = 'Controllers\\' . ucfirst($r) . 'Controller';
 
-
     $container = new \Illuminate\Container\Container();
     $controller = $container->make($controller_name);
 
     $data = call_user_func([$controller, $a]);
-
 
     include('views/layout.php') ;

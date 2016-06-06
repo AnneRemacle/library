@@ -1,6 +1,5 @@
 <section class="content">
     <h2 class="content__title">Inscription</h2>
-    <?php var_dump($_SESSION); ?>
     <form class="content__form form" action="index.php" method="post">
 
         <?php if(isset($_SESSION['errors']['pseudo'])): ?>

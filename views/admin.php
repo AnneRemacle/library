@@ -50,8 +50,8 @@
                 Vous n'avez pas de commentaires pour le moment.
             </p>
         <?php endif; ?>
-
-
     </section>
 
 </section>
+
+<?php include('partials/_aside.php'); ?>

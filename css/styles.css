@@ -148,7 +148,7 @@ body {
  * started at 26/04/2016
  */
 .header {
-  background: linear-gradient(to top, #dfdfdf, rgba(223, 223, 223, 0.2), rgba(223, 223, 223, 0), rgba(223, 223, 223, 0)), url("../../assets/img/header-bg.jpg") center no-repeat;
+  background: linear-gradient(to top, #dfdfdf, rgba(223, 223, 223, 0.2), rgba(223, 223, 223, 0), rgba(223, 223, 223, 0)), url("../assets/img/header-bg.jpg") center no-repeat;
   background-size: cover;
   height: 36.25em;
   padding-bottom: 3em; }
@@ -449,7 +449,7 @@ body {
       /*125px*/
       float: left;
       height: auto;
-      margin: 0 0.625em 2em 0;
+      margin: 0 0.625em 7em 0;
       vertical-align: top; }
     .list__item--title {
       line-height: 1;

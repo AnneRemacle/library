@@ -70,4 +70,60 @@
                 ];
         }
 
+        public function postBook() {
+            $errors = [];
+
+            if(empty($_POST['isbn'])) {
+                $errors['isbn'] = 'Veuillez entrer un numéro ISBN';
+            } elseif(strlen($_POST['isbn']) == 13) {
+                $errors['isbn'] = "Veuillez entrer un numéro ISBN valide (13 chiffres)";
+            }
+
+            if(empty($_POST['title'])) {
+                $errors['title'] = 'Veuillez entrer un titre';
+            }
+
+            if(empty($_POST['genre'])) {
+                $errors['genre'] = 'Veuillez entrer un genre';
+            }
+
+             if(empty($_POST['summary'])) {
+                $errors['summary'] = 'Veuillez entrer le résumé du livre';
+            }
+
+             if(empty($_POST['cover'])) {
+                $errors['cover'] = 'Veuillez ajouter la couverture du livre';
+            }
+
+            if(count($errors)) {
+                $_SESSION['errors'] = $errors;
+                $_SESSION['old_datas'] = $_POST;
+                header('Location: index.php?r=admin&a=page');
+                return;
+            }
+
+            if($this->books_model->save([
+                'isbn' => $_POST['isbn'],
+                'title' => $_POST['title'],
+                'genre' => $_POST['genre'],
+                'summary' => $_POST['summary'],
+                'cover' => $_POST['cover']
+
+            ])) {
+                return ['view' => 'admin.php', 'resource_title' => 'Votre espace perso'];
+            } else {
+                $_SESSION['errors'] = ['error' => 'Impossible d’entrer ces données dans la base de données'];
+                $_SESSION['old_datas'] = $_POST;
+                header('Location: index.php?r=admin&a=page');
+            }
+
+            return ['view' => 'admin.php', 'resource_title' => 'Votre espace perso'];
+        }
+
+        public function add(){
+            $view = 'addBooks.php';
+
+            return ['view' => $view, 'resource_title' => 'Biblio - Les livres'];
+        }
+
     }
