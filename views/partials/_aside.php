@@ -8,7 +8,7 @@
                         <a class="aside__nav-link" href="index.php?a=admin&r=page&with=books,comments">Mon profil</a>
                     </li>
                     <li class="aside__item">
-                        <a class="aside__nav-link" href="index.php?a=add&r=books">Ajouter un livre</a>
+                        <a class="aside__nav-link" href="index.php?a=add&r=books&with=authors,editors,nationalities">Ajouter un livre</a>
                     </li>
                     <li class="aside__item">
                         <a class="aside__nav-link" href="modify.html">Modifier mon profil</a>

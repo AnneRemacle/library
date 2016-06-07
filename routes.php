@@ -16,5 +16,6 @@ $routes = [
     'post_login' => 'POST/postLogin/auth', // exécute le login
     'get_logout' => 'GET/getLogout/auth' , // déconnecte l'utilisateur
     'create_book' => 'GET/add/books',
-    'store_book' => 'POST/store/books'
+    'store_book' => 'POST/postBook/books',
+    'add_comment' => 'POST/add/comments'
 ];

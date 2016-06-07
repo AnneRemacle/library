@@ -59,6 +59,8 @@ namespace Models;
             foreach (array_keys($fields) as $field) {
                 $pdoSt->bindValue(':' . $field, $fields[$field]);
             }
-            return $pdoSt->execute();
+            $pdoSt->execute();
+
+            return $this->cn->lastInsertId();
         }
     }

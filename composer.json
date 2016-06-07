@@ -13,6 +13,7 @@
     }
   },
   "require": {
-    "Illuminate/Container": "^5.2"
+    "Illuminate/Container": "^5.2",
+    "nesbot/carbon": "^1.21"
   }
 }

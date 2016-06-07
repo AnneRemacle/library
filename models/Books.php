@@ -70,14 +70,24 @@
             return $pdoSt->fetchAll();
         }
 
-        public function addBook( $isbn, $title, $genre, $published_at, $editor_id, $nationality_id, $summary, $cover, $pages_num ) {
-        $sql = 'INSERT INTO books ( isbn, title, genre, published_at, editor_id, nationality_id, summary, cover, pages_num ) VALUES( :isbn, :title, :genre, :published_at, :editor_id, :nationality_id, :summary, :cover, :pages_num )';
-        try {
-            $res = $this->connexion->prepare( $sql );
-            $res->execute( [ ':isbn' => $isbn, ':title' => $title, ':genre' => $genre, ':published_at' => $published_at, ':editor_id' => $editor_id, ':nationality_id' => $nationality_id, ':summary' => $summary, ':cover' => $cover, ':pages_num' => $pages_num ] );
-        } catch(PDOException $e) {
-            die( $e->addBook() );
+        public function attachUser($book_id, $user_id){
+            $sql = 'INSERT INTO book_user (book_id, user_id) VALUES (:book_id, :user_id)';
+            $pdoSt = $this->cn->prepare($sql);
+
+            return $pdoSt->execute([
+                'book_id' => $book_id,
+                'user_id' => $user_id,
+            ]);
         }
-    }
+
+        public function attachAuthor($book_id, $author_id){
+            $sql = 'INSERT INTO author_book (book_id, author_id) VALUES (:book_id, :author_id)';
+            $pdoSt = $this->cn->prepare($sql);
+
+            return $pdoSt->execute([
+                'book_id' => $book_id,
+                'author_id' => $author_id
+            ]);
+        }
 
     }

@@ -1,23 +1,47 @@
 <section class="content content-admin clearfix">
-    	    <h1 class="content__title">Ajouter un livre</h1>
+            <h1 class="content__title">Ajouter un livre</h1>
 
             <section class="admin-form">
-            	<form  class="admin-form" action="" method="post">
-            		<div class="form-group">
-            			<label class="form-label" for="title">Titre :</label>
-            			<input class="form-control" type="text" name="title" id="title" placeholder="ex: Le Trône de Fer">
-            		</div>
+            	<form  class="admin-form" action="index.php?a=postBook&r=books" method="post">
+
+                        <?php if(isset($_SESSION['errors']['title'])): ?>
+                            <div class="error">
+                            <p>
+                                <?php echo $_SESSION['errors']['title'] ?>
+                            </p>
+                        </div>
+                        <?php endif; ?>
+    		<div class="form-group">
+    			<label class="form-label" for="title">Titre :</label>
+    			<input class="form-control" type="text" name="title" id="title" placeholder="ex: Le Trône de Fer" value="<?php echo isset($_SESSION['old_datas']['title']) ? $_SESSION['old_datas']['title'] : ''; ?>">
+    		</div>
+
+                    <?php if(isset($_SESSION['errors']['summary'])): ?>
+                            <div class="error">
+                            <p>
+                                <?php echo $_SESSION['errors']['summary'] ?>
+                            </p>
+                        </div>
+                        <?php endif; ?>
                     <div class="form-group">
             			<label class="form-label" for="summary">Résumé :</label>
-            			<textarea class="form-control" name="summary" id="summary" rows="10" placeholder="ex: C'est trois nains… et ils vont à la mine…"></textarea>
+            			<textarea class="form-control" name="summary" id="summary" rows="10" placeholder="ex: C'est trois nains… et ils vont à la mine…"><?php echo isset($_SESSION['old_datas']['summary']) ? $_SESSION['old_datas']['summary'] : ''; ?></textarea>
             		</div>
                     <div class="form-group">
-            			<label class="form-label" for="cover_url">Sélectionnez la couverture du livre</label>
-            			<input class="form-control form-button--picture" type="file" name="cover_url">
-        		    </div>
+            			<label class="form-label" for="cover">Insérez l'url de la couverture du livre</label>
+            			<input class="form-control" type="text" name="cover" id="cover" />
+        	         </div>
+
+                     <?php if(isset($_SESSION['errors']['isbn'])): ?>
+                            <div class="error">
+                            <p>
+                                <?php echo $_SESSION['errors']['isbn'] ?>
+                            </p>
+                        </div>
+                        <?php endif; ?>
                     <div class="form-group">
                         <label class="form-label" for="isbn">N° ISBN :</label>
-                        <input class="form-control" type="text" name="isbn" id="isbn" placeholder="ex: 978-2266154123">
+                        <input class="form-control" type="text" name="isbn" id="isbn" placeholder="ex: 978-2266154123" value="<?php echo isset($_SESSION['old_datas']['isbn']) ? $_SESSION['old_datas']['isbn'] : ''; ?>">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="published_at">Date de publication :</label>
@@ -32,10 +56,9 @@
             		<div class="form-group form-select">
             			<label class="form-label" for="author_id">Choisissez un auteur :</label>
             			<select class="form-control form-control--select" name="author_id" id="author_id">
-            					<option class="form-option" value="George R.R. Martin">George R.R. Martin</option>
-                                <option class="form-option" value="J.R.R. Tolkien">J.R.R. Tolkien</option>
-                                <option class="form-option" value="Agatha Christie">Agatha Christie</option>
-
+                                                    <?php foreach( $data[ 'authors' ] as $author ): ?>
+                                                            <option value="<?php echo $author->id; ?>"><?php echo $author->name; ?></option>
+                                                    <?php endforeach; ?>
             			</select>
                     </div>
                     <div class="form-group">
@@ -45,10 +68,9 @@
                     <div class="form-group form-select">
             			<label class="form-label" for="nationality_id">Et sa nationalité :</label>
             			<select class="form-control form-control--select" name="nationality_id" id="nationality_id">
-            					<option class="form-option" value="Anglais">Anglais</option>
-                                <option class="form-option" value="Américain">Américain</option>
-                                <option class="form-option" value="Français">Français</option>
-
+            				<?php foreach( $data[ 'nationalities' ] as $nationality ): ?>
+                                                            <option value="<?php echo $nationality->id; ?>"><?php echo $nationality->nationality; ?></option>
+                                                    <?php endforeach; ?>
             			</select>
                     </div>
                     <div class="form-group">
@@ -56,8 +78,8 @@
             			<input class="form-control" type="text" name="nationality" id="nationality" placeholder="ex: Suisse">
             		</div>
                     <div class="form-group">
-            			<label class="form-label" for="photo_url">Sélectionnez sa photo</label>
-            			<input class="form-control form-button--picture" type="file" name="photo_url">
+            			<label class="form-label" for="photo_url">Insérez l'url de la photo de l'auteur</label>
+            			<input class="form-control" type="text" name="photo_url" id="photo_url" />
         		    </div>
                     <div class="form-group">
                         <label class="form-label" for="birth_date">Date de naissance :</label>
@@ -71,10 +93,9 @@
                     <div class="form-group form-select">
             			<label class="form-label" for="editor_id">Choisissez un éditeur :</label>
             			<select class="form-control form-control--select" name="editor_id" id="editor_id">
-            					<option class="form-option" value="J'ai Lu">J'ai Lu</option>
-                                <option class="form-option" value="Bragelonne">Bragelonne</option>
-                                <option class="form-option" value="Pygmalion">Pygmalion</option>
-
+            				<?php foreach( $data[ 'editors' ] as $editor ): ?>
+                                                            <option value="<?php echo $editor->id; ?>"><?php echo $editor->name; ?></option>
+                                                    <?php endforeach; ?>
             			</select>
                     </div>
                     <div class="form-group">
@@ -86,24 +107,14 @@
             		<div class="form-group">
             			<input class="form-button" type="submit" value="Publier">
             		</div>
+
+                        <div>
+                            <input type="hidden" name="a" value="postBook">
+                            <input type="hidden" name="r" value="books">
+                        </div>
+
             	</form>
             </section>
         </section>
 
-        <aside class="aside clearfix">
-            <h2 class="hidden">Menu de l'espace perso</h2>
-            <nav class="aside__nav">
-                <h3 class="aside__nav-title">Que voulez-vous faire?</h3>
-                <ul>
-                    <li class="aside__item">
-                        <a class="aside__nav-link" href="administration.html">Mon profil</a>
-                    </li>
-                    <li class="aside__item">
-                        <a class="aside__nav-link" href="add-book.html">Ajouter un livre</a>
-                    </li>
-                    <li class="aside__item">
-                        <a class="aside__nav-link" href="modify.html">Modifier mon profil</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+    <?php include('partials/_aside.php'); ?>

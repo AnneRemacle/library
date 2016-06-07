@@ -56,39 +56,40 @@
 
     <section class="comments">
         <h2 class="others__title">Commentaires</h2>
-        <p class="comments__alert">Vous devez être connecté pour poster un commentaire&nbsp;! <a class="comments__alert--link" href="connexion.html" title="Vers la page de connexion">Se connecter</a></p>
-        <form action="#" method="post" class="form form-comment">
-            <div class="form-group">
-                <label class="form-label" for="login">Pseudo</label>
-                <input class="form-control"type="text" id="login" name="login" placeholder="Pol Ochon"/>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="comment">Votre commentaire</label>
-                <textarea class="form-control form-control--area" rows="10" id="comment" name="comment" placeholder="Bla bla bla bla blabla"></textarea>
-            </div>
-            <div class="form-group">
-                <input  class="form-button form-button--smallBtn" type="submit" value="Poster mon commentaire" />
-            </div>
-        </form>
+        
+
+        <?php if(!isset($_SESSION['user'])): ?>
+                <p class="comments__alert">Vous devez être connecté pour poster un commentaire&nbsp;! <a class="comments__alert--link" href="login.php" title="Vers la page de connexion">Se connecter</a></p>
+        <?php else: ?>
+            <?php $user = json_decode($_SESSION['user']); ?>
+                <form action="index.php?a=add&r=comments" method="post" class="form form-comment">
+                    <input type="hidden" name="book_id" value="<?php echo $data['book']->id; ?>">
+                    <?php if(isset($_SESSION['errors']['comment'])): ?>
+                            <div class="error">
+                            <p>
+                                <?php echo $_SESSION['errors']['comment'] ?>
+                            </p>
+                        </div>
+                        <?php endif; ?>
+                    <div class="form-group">
+                        <label class="form-label" for="comment">Votre commentaire</label>
+                        <textarea class="form-control form-control--area" rows="10" id="comment" name="comment" placeholder="Bla bla bla bla blabla"><?php echo isset($_SESSION['old_datas']['comment']) ? $_SESSION['old_datas']['comment'] : ''; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input  class="form-button form-button--smallBtn" type="submit" value="Poster mon commentaire" />
+                    </div>
+                </form>
+        <?php endif; ?>
+
         <ul class="comments__list">
+        <?php foreach($data['comments'] as $comment): ?>
             <li class="comments__item">
-                <strong class="comments__name">Pol Ochon</strong>
+                <strong class="comments__name"><?php echo $comment->author; ?></strong>
 
-                <time class="comments__date" datetime="2012-02-11T16:24:02">Publié le 11/02/2012 à 16:24</time>
-                <p class="comments__text">trop chouette livre!</p>
+                <time class="comments__date" datetime="<?php $comment->created_at; ?>">Publié le <?php echo Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $comment->created_at)->formatLocalized('%d  %B %Y à %k:%M:%S'); ?></time>
+                <p class="comments__text"><?php echo $comment->comment; ?></p>
             </li>
-            <li class="comments__item">
-                <strong class="comments__name">Pol Ochon</strong>
-
-                <time class="comments__date" datetime="2012-02-11T16:24:02">Publié le 11/02/2012 à 16:24</time>
-                <p class="comments__text">trop chouette livre!</p>
-            </li>
-            <li class="comments__item">
-                <strong class="comments__name">Pol Ochon</strong>
-
-                <time class="comments__date" datetime="2012-02-11T16:24:02">Publié le 11/02/2012 à 16:24</time>
-                <p class="comments__text">trop chouette livre!</p>
-            </li>
+        <?php endforeach; ?>
         </ul>
     </section>
 </section>

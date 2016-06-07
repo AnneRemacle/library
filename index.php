@@ -1,6 +1,9 @@
 <?php
     require('vendor/autoload.php');
     require('routes.php');
+
+    setlocale(LC_TIME, 'fr_FR');
+
     session_start();
     $default_route = $routes['default'];
     $route_parts = explode('/', $default_route);

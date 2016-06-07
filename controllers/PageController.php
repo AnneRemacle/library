@@ -34,10 +34,10 @@ class PageController extends Controller {
                     $books_model = new Books();
                     $users_model = new User();
                     $comments_model = new Comments();
-                    $books_count = $users_model -> getCountBooksByUserId ( $user -> id );
-                    $books = $books_model -> getBooksByUserId ( $user -> id );
-                    $comments_count = $users_model -> getCountCommentsByUserId( $user->id );
-                    $comments = $comments_model -> getCommentsByUserId( $user->id );
+                    $books_count = $users_model->getCountBooksByUserId ( $user -> id );
+                    $books = $books_model->getBooksByUserId ( $user -> id );
+                    $comments_count = $users_model->getCountCommentsByUserId( $user->id );
+                    $comments = $comments_model->getCommentsByUserId( $user->id );
                 }
 
             }
