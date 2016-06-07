@@ -2,7 +2,7 @@
     	    <h1 class="content__title">Ajouter un livre</h1>
 
             <section class="admin-form">
-            	<form  class="admin-form" action="#" method="post">
+            	<form  class="admin-form" action="" method="post">
             		<div class="form-group">
             			<label class="form-label" for="title">Titre :</label>
             			<input class="form-control" type="text" name="title" id="title" placeholder="ex: Le Trône de Fer">

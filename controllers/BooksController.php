@@ -101,7 +101,7 @@
                 header('Location: index.php?r=admin&a=page');
                 return;
             }
-
+            var_dump($_POST);
             if($this->books_model->save([
                 'isbn' => $_POST['isbn'],
                 'title' => $_POST['title'],
